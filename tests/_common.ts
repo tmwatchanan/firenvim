@@ -187,7 +187,11 @@ export async function testCodemirror(driver: webdriver.WebDriver) {
                 .concat(":wq!".split(""))
                 .concat(webdriver.Key.ENTER)
         );
-        await driver.wait(Until.stalenessOf(span), 5000, "Span handle did not go stale.");
+        try {
+                await driver.wait(Until.stalenessOf(span), 5000, "Span handle did not go stale.");
+        } catch (e) {
+                throw new Error(e.toString + (await driver.executeScript("return document.innerHTML;")))
+        }
         // We need to search for input again because the reference somehow goes stale there
         input = await driver.wait(Until.elementLocated(By.css("div.CodeMirror")), 5000, "CodeMirror div can't be found again");
         await driver.wait(async () => (await input.getAttribute("innerText")) != originalValue, 5000, "CodeMirror element's content did not change.");
