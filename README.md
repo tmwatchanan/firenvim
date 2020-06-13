@@ -1,6 +1,7 @@
 # Firenvim  [![Build & Test](https://github.com/glacambre/firenvim/workflows/Test/badge.svg)](https://github.com/glacambre/firenvim/actions?workflow=Test) [![Total alerts](https://img.shields.io/lgtm/alerts/g/glacambre/firenvim.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/glacambre/firenvim/alerts/) [![Vint](https://github.com/glacambre/firenvim/workflows/Vint/badge.svg)](https://github.com/glacambre/firenvim/actions?workflow=Vint) [![Luacheck](https://github.com/glacambre/firenvim/workflows/Luacheck/badge.svg)](https://github.com/glacambre/firenvim/actions?workflow=Luacheck) [![Matrix](https://img.shields.io/matrix/firenvim:matrix.org)](https://riot.im/app/#/room/#firenvim:matrix.org)
 
 Turn your browser¹ into a Neovim client.
+It's quite good actually. There is no conflict between vim and customized editor in any site at all.
 
 ¹ <sub>Firefox and Chrome are specifically supported. Other Chromium based browsers such as Brave, Vivaldi, and Opera should also work but are not specifically tested.</sub>
 
